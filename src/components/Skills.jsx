@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { SkillsParticleSystem } from '@/lib/SkillsParticleSystem';
+import { getAssetPath } from '@/lib/assets';
 
 const SKILLS_DATA = [
     { id: "js", label: "JavaScript", slug: "javascript", icon: "javascript.svg", color: "#F7DF1E", category: "Languages", details: "Advanced ES6+, React, Node.js" },
@@ -229,7 +230,7 @@ export default function Skills() {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`/assets/skills/${item.icon}`}
+                    src={getAssetPath(`/assets/skills/${item.icon}`)}
                     width="16"
                     height="16"
                     alt={item.label}

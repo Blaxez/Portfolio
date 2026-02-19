@@ -3,6 +3,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { getAssetPath } from "@/lib/assets";
 
 export class SkillsParticleSystem {
   constructor(container, data) {
@@ -308,7 +309,7 @@ export class SkillsParticleSystem {
     if (this.onSkillChange) this.onSkillChange(skill, index);
 
     const imageSource = skill.icon
-      ? `/assets/skills/${skill.icon}`
+      ? getAssetPath(`/assets/skills/${skill.icon}`)
       : skill.iconUrl || skill.slug;
     const points = await this.getPointsFromImage(imageSource);
 

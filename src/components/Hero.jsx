@@ -3,6 +3,7 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import LaserFlow from '@/lib/LaserFlow';
 import DotGridBackground from '@/lib/DotGridBackground';
+import { getAssetPath } from '@/lib/assets';
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -169,7 +170,7 @@ export default function Hero() {
           <div className="hero-layout-left">
             <div className="hero-mascot" ref={mascotRef}>
                 <Image 
-                  src="/assets/mascott-v2.png" 
+                  src={getAssetPath("/assets/mascott-v2.png")} 
                   alt="Mascot" 
                   width={420} 
                   height={420} 

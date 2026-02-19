@@ -94,7 +94,7 @@ export default function About() {
                   transition={{ duration: 0.4, delay: 0.1 }}
                   className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-8 mt-4"
                 >
-                  <p className="max-w-xl text-base md:text-xl text-[var(--fg)] opacity-80 leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <p className="max-w-xl text-base md:text-xl text-[var(--fg)] opacity-80 leading-relaxed" style={{ fontFamily: "var(--font-playfair), serif" }}>
                     {item.desc}
                   </p>
                   <div className="flex flex-wrap gap-2 md:gap-4 flex-shrink-0">
